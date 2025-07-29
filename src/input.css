@@ -1,0 +1,98 @@
+@import "tailwindcss";
+/* @config "../tailwind.config.js" */
+
+
+@layer components {
+    .name {
+        @apply font-sans font-bold text-rezo-900
+    }
+    .cost {
+        @apply text-redstyle font-semibold
+    }
+    .product {
+        @apply w-full rounded-2xl
+    }
+    .btn {
+        @apply 
+        bg-white 
+        border border-rezo-500 rounded-4xl 
+        font-semibold px-6 py-2 
+        hover:bg-rezo-100 hover:cursor-pointer 
+        inset-0 z-10
+    }
+    .card-container {
+        @apply mb-7 lg:w-100
+    }
+    .menu {
+        @apply lg:grid lg:grid-cols-3 
+        lg:gap-5 lg:me-10 lg:w-3/5
+    }
+    .card-container {
+        @apply flex flex-col size-auto
+    }
+    .card-container>div {
+        @apply flex-col justify-items-center mb-5
+    }
+    .cart {
+        @apply bg-white rounded-2xl 
+        h-fit px-5 mb-5 py-5 
+        lg:-mt-15 lg:w-max lg:flex-2 lg:me-20
+        
+    }
+    .btn-counter {
+        @apply bg-redstyle text-white rounded-4xl 
+        flex justify-between items-center
+        px-2 py-2 
+        absolute 
+        z-20 inset-0
+    }
+    .increase, .decrease {
+        @apply border-2 border-white size-5 rounded-full p-1 mx-2 cursor-pointer hover:bg-white/30
+    }
+    .delete {
+        @apply border-2 border-rezo-300 size-5 p-[1px] rounded-full -mb-7 hover:bg-rezo-100
+    }
+    .order-total {
+        @apply my-6 text-rezo-500 font-medium flex justify-between items-center 
+    }
+    .carbon-neutral {
+        @apply text-rezo-900 flex justify-center bg-rezo-50 rounded-md py-4
+    }
+    .confirmBtn {
+        @apply bg-rezo-500 text-rezo-50 rounded-4xl py-4 mx-auto w-full mt-6 cursor-pointer hover:bg-redstyle
+    }
+    .singleCost {
+        @apply text-rezo-500 font-semibold;
+    }
+    .overlay {
+        @apply flex bg-black/50 w-full h-full fixed inset-0 z-100 bottom-0 
+        justify-center items-center
+    }
+    .startBtn {
+        @apply bg-rezo-500 text-rezo-50 rounded-4xl w-full text-sm py-3 my-3 cursor-pointer hover:bg-redstyle
+    }
+}
+
+@theme {
+    --color-redstyle: hsl(14, 86%, 42%);
+    --color-rezo-50: hsl(20, 50%, 98%);
+    --color-rezo-100: hsl(13, 31%, 94%);
+    --color-rezo-300: hsl(14, 25%, 72%);
+    --color-rezo-400: hsl(7, 20%, 60%);
+    --color-rezo-500: hsl(12, 20%, 44%);
+    --color-rezo-900: hsl(14, 65%, 9%);
+}
+
+@theme {
+    --animate-wiggle: wiggle 1s ease-in-out;
+    @keyframes wiggle {
+    0%,
+    100% {
+        transform: rotate(-3deg);
+    }
+    50% {
+        transform: rotate(3deg);
+        transform: scale(1.3);
+    }
+    }
+}
